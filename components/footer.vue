@@ -123,8 +123,14 @@ export default {
 
   },
   mounted () {
+    console.log(document.body.clientHeight)
+    // if (document.body.clientHeight <= 845) {
+    //   this.showFlag = true
+    // }
     document.addEventListener('scroll', e => {
-      if (document.documentElement.scrollTop < 500) {
+      let widthCli = document.documentElement.scrollTop || document.body.scrollTop || e.pageY
+      console.log(widthCli)
+      if (widthCli == undefined || widthCli < 500) {
         this.showFlag = false
       } else {
         this.showFlag = true

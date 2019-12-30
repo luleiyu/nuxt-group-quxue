@@ -95,13 +95,13 @@ export default {
         }
       })
       if (val.id == 1) {
-        this.$router.push('/homePage')
+        this.$router.push('/')
       } else if (val.id == 2) {
-        this.$router.push('/homePage')
+        this.$router.push('/productCenter')
       } else if (val.id == 3) {
-        this.$router.push('/homePage')
+        this.$router.push('/brandCooperation')
       } else if (val.id == 4) {
-        this.$router.push('/homePage')
+        this.$router.push('/aboutWe')
       }
     },
     changeSubTitle (event,val,itemList) {
@@ -113,6 +113,13 @@ export default {
           item.status = true
         } else {
           item.status = false
+        }
+        if (val.id == 1) {
+          this.$router.push('/productCenter')
+        } else if (val.id == 2) {
+          this.$router.push('/productCenter/ai')
+        } else if (val.id == 3) {
+          this.$router.push('/productCenter/customservices')
         }
       })
       this.list.map(item => {
@@ -227,6 +234,11 @@ export default {
           box-sizing: border-box;
           color:#000;
           font-size: 20px;
+        }
+        .sub_sub_eve_tab:hover {
+          // font-size: 22px;
+          color: yellow;
+          background: brown;
         }
         .sub_tab_select {
           background: #000;

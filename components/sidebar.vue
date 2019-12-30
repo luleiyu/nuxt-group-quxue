@@ -11,7 +11,7 @@
         <img style="width:100%;" src="../assets/img/demo.png" alt="">
       </div>
     </div>
-    <div class="second" @click="handlerClick(2)">
+    <div class="second" @click="handlerClick(2)" @mouseleave="phoneAskFromUser">
       <div>
         <img class="side_img" src="../assets/img/demo.png" alt="">
         <div>电话咨询</div>
@@ -23,6 +23,7 @@
         <el-input v-model="userName" placeholder="请输入姓名"></el-input>
         <el-input v-model="userPhone" placeholder="请输入手机号"></el-input>
         <el-input v-model="userThinkAbout" placeholder="请输入咨询内容"></el-input>
+        <el-button @click.stop="submitUserinfo">提交</el-button>
       </div>
     </div>
     <div class="third"  @click="handlerClick(3)">
@@ -46,6 +47,23 @@ export default {
     }
   },
   methods: {
+    submitUserinfo () {
+      console.log('提交用户的信息')
+      setTimeout(() => {
+        this.qrcodeFlag1 = false
+      }, 500)
+    },
+    phoneAskFromUser (e) {
+      let myClientWidth = document.body.clientWidth
+      if ((myClientWidth - e.clientX) >= 100 && (myClientWidth - e.clientX) <= 200) {
+        // this.qrcodeFlag1 = true
+      } else {
+        this.qrcodeFlag1 = false
+      }
+      if (e.clientY > 390 || e.clientY < 200) {
+        this.qrcodeFlag1 = false
+      }
+    },
     myMouseEnter () {
       this.qrcodeFlag = true
       console.log('enter')

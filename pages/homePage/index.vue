@@ -1,15 +1,6 @@
 <template>
   <div class="home_page">
-    <el-carousel height="500px" >
-      <el-carousel-item
-        v-for="item in 4"
-        :key="item"
-        @click.native="handlerEveryCarousel(item)">
-        <h3 class="small" >
-          {{ item }}
-        </h3>
-      </el-carousel-item>
-    </el-carousel>
+    <my-carousel></my-carousel>
     <div>
       <div
         @mouseenter="imgDialogCover(val)"
@@ -28,15 +19,14 @@
 </template>
 
 <script>
-import first from './first'
+import myCarousel from '@/components/my-carousel'
 import {
   entryActivities
 } from '@/http/api/home.js'
 
 export default {
   components: {
-    // eslint-disable-next-line vue/no-unused-components
-    first
+    myCarousel
   },
   data () {
     return {
@@ -140,21 +130,6 @@ export default {
 </script>
 
 <style lang="scss">
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-     background-color: #99a9bf;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-     background-color: #d3dce6;
-  }
 .home_page {
   .parent_div {
     text-align:center;
