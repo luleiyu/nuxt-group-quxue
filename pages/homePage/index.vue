@@ -28,6 +28,14 @@ export default {
   components: {
     myCarousel
   },
+  head () {
+    return {
+      title: '首页',
+      meta: [
+        { hid: 'firstpage', name: 'description', content: 'homepage,首页，趣学英语，服务商合作，AI,product,产品中心，研发中心' }
+      ]
+    }
+  },
   data () {
     return {
       imgListContent: [

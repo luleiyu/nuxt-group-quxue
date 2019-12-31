@@ -12,6 +12,14 @@ export default {
   components: {
     myCarousel
   },
+  head () {
+    return {
+      title: 'AI中心',
+      meta: [
+        { hid: 'AI', name: 'description', content: 'AI,product,产品中心，研发中心' }
+      ]
+    }
+  },
   data () {
     return {
 

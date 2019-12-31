@@ -1,7 +1,7 @@
 {
-  "name": "test-app-nuxt",
+  "name": "趣学世界",
   "version": "1.0.0",
-  "description": "My lovely Nuxt.js project",
+  "description": "趣学世界致力于为3-15岁青少年提供更优质的英语服务",
   "author": "l4442479",
   "private": true,
   "scripts": {

@@ -43,6 +43,14 @@ export default {
   components: {
     myCarousel
   },
+  head () {
+    return {
+      title: '合作案例',
+      meta: [
+        { hid: 'custom', name: 'description', content: '服务商合作，AI,product,产品中心，研发中心' }
+      ]
+    }
+  },
   data () {
     return {
 

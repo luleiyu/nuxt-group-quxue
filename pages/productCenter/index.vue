@@ -12,9 +12,17 @@ export default {
   components: {
     myCarousel
   },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'product,产品中心，研发中心' }
+      ]
+    }
+  },
   data () {
     return {
-
+      title: '产品中心'
     }
   },
   mounted () {

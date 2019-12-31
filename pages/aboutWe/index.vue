@@ -39,6 +39,14 @@ export default {
   components: {
     myCarousel
   },
+  head () {
+    return {
+      title: '关于我们',
+      meta: [
+        { hid: 'about', name: 'description', content: 'about me,关于我们，我们是谁，who are you? brand，cooperation，homepage,首页，趣学英语，服务商合作，AI,product,产品中心，研发中心' }
+      ]
+    }
+  },
   data () {
     return {
 
