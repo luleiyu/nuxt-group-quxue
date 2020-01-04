@@ -23,6 +23,8 @@ export default {
   methods: {
     handlerEveryCarousel (val) {
       console.log(val)
+      // window.open('http://www.baidu.com')
+      window.open('http://english.quxueabc.com/demo-video/demo_video.mp4')
     },
   }
 }

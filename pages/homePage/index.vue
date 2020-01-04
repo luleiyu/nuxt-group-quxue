@@ -2,6 +2,11 @@
   <div class="home_page">
     <my-carousel></my-carousel>
     <div>
+      <!-- nofullscreen -->
+      <video
+        controls
+        controlsList='nodownload noremoteplayback'
+        src="http://english.quxueabc.com/demo-video/demo_video.mp4"></video>
       <div
         @mouseenter="imgDialogCover(val)"
         @mouseleave="imgLeaveDialogCover(val)"
@@ -9,7 +14,7 @@
         v-for="(val,index) in imgListContent"
         :key="index">
         <img style="vertical-align:middle;" src="../../assets/img/demo.png" alt="">
-        <div v-if="val.status" class="inner_content">
+        <div v-show="val.status" class="inner_content">
           <div>{{val.title}}</div>
           <div>{{val.content}}</div>
         </div>
