@@ -129,7 +129,7 @@ export default {
     // }
     document.addEventListener('scroll', e => {
       let widthCli = document.documentElement.scrollTop || document.body.scrollTop || e.pageY
-      console.log(widthCli)
+      // console.log(widthCli)
       if (widthCli == undefined || widthCli < 500) {
         this.showFlag = false
       } else {

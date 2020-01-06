@@ -23,7 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'video.js/dist/video-js.css'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -46,7 +47,11 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui',
-    '@/plugins/axios'
+    '@/plugins/axios',
+    {
+      src: '~plugins/video-player.js',
+      ssr: false
+    }
     // {
     //   src: '@/plugins/axios',
     //   ssr: true
